@@ -27,10 +27,10 @@
     </div>
     <div class="container">
         <!-- the whole thing -->
-        <div class="frame">
+        <div class="frame1">
             <!-- two items -->
 
-            <div class="item">
+            <div class="item1">
                 <div class="image">
                     <img style="height: 100%; width: 100%; object-fit: cover;"
                         src="https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg?resize=960%2C503">
@@ -56,7 +56,7 @@
             </div>
 
 
-            <div class="item">
+            <div class="item2">
                 <div class="image">
                     <img style="height: 100%; width: 100%; object-fit: cover;"
                         src="https://www.recipetineats.com/wp-content/uploads/2023/05/Garlic-cheese-pizza_9.jpg">
@@ -82,10 +82,10 @@
             </div>
 
         </div>
-        <div class="frame">
+        <div class="frame2">
 
 
-            <div class="item">
+            <div class="item1">
                 <div class="image">
                     <img style="height: 100%; width: 100%; object-fit: cover;"
                         src="https://images.theconversation.com/files/525691/original/file-20230511-19-w9pz4k.jpg?ixlib=rb-">
@@ -111,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item2">
                 <div class="image">
                     <img style="height: 100%; width: 100%; object-fit: cover; aspect-ratio: 1/1;"
                         src="https://cdn.vox-cdn.com/thumbor/0spbbgyWxgwuWpk8QOCZi2Ym3Kk=/0x0:1599x1066/1200x900/filters:focal(673x406:927x660)/cdn.vox-cdn.com/uploads/chorus_image/image/63217666/i_qNz6LTF_X3.97.jpg">
@@ -216,18 +216,11 @@
 
     .container {
         display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
+        gap: 16px;
     }
 
-    .subContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .frame {
+    .frame1 {
         display: flex;
         flex-direction: row;
         flex: 1 1 auto;
@@ -235,11 +228,26 @@
         justify-content: space-between;
     }
 
-    .item {
-        flex: 1 1 300px;
+    .frame2 {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+        gap: 16px;
+        justify-content: space-between;
+    }
+    .item1 {
+        flex: 1 1 0;
         padding-bottom: 16px;
+        text-align: center;
+    }
+
+    .item2 {
+        flex: 1 1 0;
+        padding-bottom: 16px;
+        text-align: center;
 
     }
+
 
     .image {
         aspect-ratio: 1/1;
@@ -300,6 +308,22 @@
         line-height: 16px;
         word-wrap: break-word;
     }
+
+    @media only screen and (min-width : 700px) {
+    .frame1 {
+        flex: 2;
+        width: 50vw;
+    }
+    .frame2 {
+        flex: 2;
+        width: 50vw;
+    }
+    .container {
+        flex-direction: row;
+    }
+
+}
+
 </style>
 
 </html>
